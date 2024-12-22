@@ -160,3 +160,6 @@ assets
 temp
 temp_*/
 node_modules
+
+# Local Netlify folder
+.netlify

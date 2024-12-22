@@ -1,0 +1,9 @@
+dist
+node_modules
+coverage
+build
+.next
+.vercel
+.vscode
+*.min.js
+*.d.ts
