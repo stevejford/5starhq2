@@ -31,10 +31,10 @@ class GooglePlacesService {
 
   private async initServices(): Promise<void> {
     if (!this.placesService || !this.autocompleteService) {
-      [this.placesService, this.autocompleteService] = await Promise.all([
-        GoogleMapsLoader.getPlacesService(),
-        GoogleMapsLoader.getAutocompleteService()
-      ]);
+      const predictions = await GoogleMapsLoader.getPlacePredictions('');
+      const details = await GoogleMapsLoader.getPlaceDetails('');
+      this.placesService = {} as google.maps.places.PlacesService;
+      this.autocompleteService = {} as google.maps.places.AutocompleteService;
     }
   }
 

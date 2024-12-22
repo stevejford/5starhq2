@@ -45,6 +45,7 @@ export interface BusinessOverview {
 
 export interface BusinessSearchResult {
   id: string;
+  place_id: string;
   name: string;
   formatted_address: string;
   formatted_phone_number?: string;
@@ -54,7 +55,7 @@ export interface BusinessSearchResult {
   website?: string;
   url?: string;
   reviews?: Review[];
-  opening_hours?: OpeningHours;
-  place_id: string;
+  latitude?: number;
+  longitude?: number;
   types: string[];
 }

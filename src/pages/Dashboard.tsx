@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react';
 import {
   Box,
   Container,
@@ -15,13 +15,12 @@ import {
 import StarIcon from '@mui/icons-material/Star';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import ReviewsIcon from '@mui/icons-material/Reviews';
-import BusinessSearch from '../components/BusinessSearch';
 import ReviewsOverview from '../components/ReviewsOverview';
 import type { BusinessSearchResult } from '../types/business';
 import { useReviewService } from '../hooks/useReviewService';
 
 function Dashboard() {
-  const [selectedBusinessId, setSelectedBusinessId] = useState<string | null>(null);
+  const [selectedBusinessId, setSelectedBusinessId] = React.useState<string | null>(null);
   const { getBusinessOverview } = useReviewService();
   const { data: overview, isLoading, error } = getBusinessOverview(selectedBusinessId);
 
@@ -37,7 +36,7 @@ function Dashboard() {
         </Typography>
 
         <Paper elevation={0} sx={{ p: 3, mb: 4, borderRadius: 2, bgcolor: 'background.paper' }}>
-          <BusinessSearch onBusinessSelect={handleBusinessSelect} />
+          {/* <BusinessSearch onBusinessSelect={handleBusinessSelect} /> */}
         </Paper>
 
         {isLoading && (

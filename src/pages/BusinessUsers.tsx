@@ -152,12 +152,7 @@ export default function BusinessUsers() {
               value=""
               displayEmpty
               IconComponent={KeyboardArrowDownIcon}
-              renderValue={(selected) => {
-                if (!selected) {
-                  return "Search by locations";
-                }
-                return selected;
-              }}
+              renderValue={(selected: unknown) => (selected as string)}
             >
               <MenuItem value="">All locations</MenuItem>
             </StyledSelect>

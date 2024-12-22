@@ -25,7 +25,7 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
-import { GoogleSmallIcon, ThumbsUpSmallIcon, PersonIcon, ThumbsUpIcon } from './icons';
+import { PersonIcon, ThumbsUpIcon } from './icons';
 
 interface CustomIconProps {
   sx?: React.CSSProperties;
@@ -186,15 +186,7 @@ export default function ReviewsPage() {
                           justifyContent: 'center',
                           overflow: 'hidden'
                         }}>
-                          <img 
-                            src="https://assetonline.s3.eu-central-1.amazonaws.com/integrations/google.webp"
-                            alt="Google"
-                            style={{
-                              width: '100%',
-                              height: '100%',
-                              objectFit: 'contain'
-                            }}
-                          />
+                          <GoogleIcon sx={{ width: '100%', height: '100%' }} />
                         </Box>
                       </Box>
                     </Box>
@@ -327,9 +319,7 @@ export default function ReviewsPage() {
                           width: '100%',
                           height: '100%',
                           transform: 'scale(1.2)',
-                          '& path': {
-                            fill: 'currentColor'
-                          }
+                          fill: 'currentColor'
                         }} />
                       </Box>
                     </Box>
@@ -565,33 +555,9 @@ export default function ReviewsPage() {
             displayEmpty
             fullWidth
             MenuProps={{
-              PaperProps: {
-                sx: {
-                  borderRadius: '20px',
-                  mt: 1,
-                  boxShadow: '0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                  '& .MuiMenuItem-root': {
-                    fontSize: '14px',
-                    py: 1,
-                    px: 2
-                  }
-                }
-              },
-              slotProps: {
-                paper: {
-                  style: {
-                    overflow: 'visible'
-                  }
-                }
-              },
-              PopoverClasses: {
-                root: {
-                  pointerEvents: 'none' as const
-                }
-              },
-              MenuListProps: {
-                style: {
-                  pointerEvents: 'auto'
+              sx: {
+                '& .MuiPopover-root': {
+                  pointerEvents: 'none'
                 }
               }
             }}
@@ -628,33 +594,9 @@ export default function ReviewsPage() {
             displayEmpty
             fullWidth
             MenuProps={{
-              PaperProps: {
-                sx: {
-                  borderRadius: '20px',
-                  mt: 1,
-                  boxShadow: '0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                  '& .MuiMenuItem-root': {
-                    fontSize: '14px',
-                    py: 1,
-                    px: 2
-                  }
-                }
-              },
-              slotProps: {
-                paper: {
-                  style: {
-                    overflow: 'visible'
-                  }
-                }
-              },
-              PopoverClasses: {
-                root: {
-                  pointerEvents: 'none' as const
-                }
-              },
-              MenuListProps: {
-                style: {
-                  pointerEvents: 'auto'
+              sx: {
+                '& .MuiPopover-root': {
+                  pointerEvents: 'none'
                 }
               }
             }}
@@ -690,33 +632,9 @@ export default function ReviewsPage() {
             displayEmpty
             fullWidth
             MenuProps={{
-              PaperProps: {
-                sx: {
-                  borderRadius: '20px',
-                  mt: 1,
-                  boxShadow: '0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                  '& .MuiMenuItem-root': {
-                    fontSize: '14px',
-                    py: 1,
-                    px: 2
-                  }
-                }
-              },
-              slotProps: {
-                paper: {
-                  style: {
-                    overflow: 'visible'
-                  }
-                }
-              },
-              PopoverClasses: {
-                root: {
-                  pointerEvents: 'none' as const
-                }
-              },
-              MenuListProps: {
-                style: {
-                  pointerEvents: 'auto'
+              sx: {
+                '& .MuiPopover-root': {
+                  pointerEvents: 'none'
                 }
               }
             }}
